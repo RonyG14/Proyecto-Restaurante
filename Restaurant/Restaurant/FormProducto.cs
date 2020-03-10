@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,9 +77,18 @@ namespace Restaurant
 
         private void productoBindingNavigatorSaveItem_Click(object sender, EventArgs e)  //
         {
-            productoBindingSource.EndEdit(); 
+            productoBindingSource.EndEdit();
 
             var producto = (Producto)productoBindingSource.Current;
+
+            if (fotoPictureBox.Image != null)
+            {
+                producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                producto.Foto = null;
+            }
 
             var resultado = _productos.GuardarProducto(producto);
             
@@ -126,6 +136,35 @@ namespace Restaurant
         private void tipoTextBox_TextChanged(object sender, EventArgs e)
         {
       
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var producto = (Producto)productoBindingSource.Current;
+
+            if (producto != null)
+            {
+                openFileDialog1.ShowDialog();
+                var Archivo = openFileDialog1.FileName;
+                if (Archivo != "")
+                {
+                    var fileInfo = new FileInfo(Archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Cree un producto antes de asignarle una imagen");
+            }
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
         }
     }
 }

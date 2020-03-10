@@ -104,6 +104,7 @@ namespace BL.Restaurant
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public int Cantidad { get; set; }
+        public byte[] Foto { get; set; }
         public double Precio { get; set; }
         public string Tipo { get; set; }
         public bool Activo { get; set; }
