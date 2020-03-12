@@ -291,7 +291,7 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.productoBindingSource, "Activo", true));
             this.activoCheckBox.Location = new System.Drawing.Point(305, 122);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(78, 20);
             this.activoCheckBox.TabIndex = 3;
@@ -301,7 +301,7 @@
             // 
             this.cantidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Cantidad", true));
             this.cantidadTextBox.Location = new System.Drawing.Point(305, 84);
-            this.cantidadTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cantidadTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cantidadTextBox.Name = "cantidadTextBox";
             this.cantidadTextBox.Size = new System.Drawing.Size(79, 20);
             this.cantidadTextBox.TabIndex = 5;
@@ -310,7 +310,7 @@
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Descripcion", true));
             this.descripcionTextBox.Location = new System.Drawing.Point(305, 33);
-            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(79, 20);
             this.descripcionTextBox.TabIndex = 7;
@@ -319,7 +319,7 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(104, 37);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(79, 20);
@@ -329,7 +329,7 @@
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Precio", true));
             this.precioTextBox.Location = new System.Drawing.Point(104, 84);
-            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(79, 20);
             this.precioTextBox.TabIndex = 11;
@@ -338,7 +338,7 @@
             // 
             this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Tipo", true));
             this.tipoTextBox.Location = new System.Drawing.Point(104, 125);
-            this.tipoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.tipoTextBox.Name = "tipoTextBox";
             this.tipoTextBox.Size = new System.Drawing.Size(79, 20);
             this.tipoTextBox.TabIndex = 13;
@@ -347,7 +347,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(187, 356);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 36);
             this.button1.TabIndex = 14;
@@ -368,7 +368,7 @@
             this.dataGridViewCheckBoxColumn1});
             this.productoDataGridView.DataSource = this.productoBindingSource;
             this.productoDataGridView.Location = new System.Drawing.Point(9, 159);
-            this.productoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.productoDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.RowTemplate.Height = 24;
             this.productoDataGridView.Size = new System.Drawing.Size(526, 165);
@@ -469,7 +469,7 @@
             this.Controls.Add(tipoLabel);
             this.Controls.Add(this.tipoTextBox);
             this.Controls.Add(this.productoBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProducto";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.FormProducto_Load);
