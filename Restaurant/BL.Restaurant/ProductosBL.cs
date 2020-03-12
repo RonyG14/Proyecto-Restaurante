@@ -106,7 +106,11 @@ namespace BL.Restaurant
         public int Cantidad { get; set; }
         public byte[] Foto { get; set; }
         public double Precio { get; set; }
+
+        public int TipoId { get; set; }
         public string Tipo { get; set; }
+
+       
         public bool Activo { get; set; }
     }
 
