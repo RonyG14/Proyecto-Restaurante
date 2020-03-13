@@ -15,16 +15,23 @@ namespace Restaurant
     public partial class FormProducto : Form
     {
         ProductosBL _productos; // Creacion de Variable
+        TipoBL _tipos;
+
 
 
         public object ListaProductosBindingSource { get; private set; }
+        
 
         public FormProducto() // Constructor
         {
             InitializeComponent();
 
             _productos = new ProductosBL(); // Inicializamos Variable
-            productoBindingSource.DataSource = _productos.ObtenerProductos();
+            listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            _tipos = new TipoBL(); // Inicializamos Variable
+            listadeTiposBindingSource.DataSource = _tipos.ObtenerTipos();
+
 
         }
 
@@ -78,7 +85,6 @@ namespace Restaurant
         private void productoBindingNavigatorSaveItem_Click(object sender, EventArgs e)  //
         {
             productoBindingSource.EndEdit();
-
             var producto = (Producto)productoBindingSource.Current;
 
             if (fotoPictureBox.Image != null)
@@ -165,6 +171,16 @@ namespace Restaurant
         private void button3_Click(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
+        }
+
+        private void fotoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,9 +18,12 @@ namespace BL.Restaurant
         protected override void OnModelCreating(DbModelBuilder modelBuilder)   
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer(new DatosdeInicio());
+
         }
 
-        public DbSet<Producto> Productos { get; set; } 
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Tipo> Tipos { get; set; }
     }
 
 }

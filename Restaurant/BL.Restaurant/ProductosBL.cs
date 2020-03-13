@@ -108,11 +108,12 @@ namespace BL.Restaurant
         public double Precio { get; set; }
 
         public int TipoId { get; set; }
-        public string Tipo { get; set; }
+        public Tipo Tipo { get; set; }
 
        
         public bool Activo { get; set; }
     }
+    
 
     public class Resultado
     {
