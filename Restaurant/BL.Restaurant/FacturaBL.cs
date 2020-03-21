@@ -67,14 +67,38 @@ namespace BL.Restaurant
                 return resultado;
             }
 
+            CalcularExistencia(factura);
 
-              CalcularExistencia(factura);
 
-            _contexto.SaveChanges();   //Error
+            _contexto.SaveChanges();
             resultado.Exitoso = true;
             return resultado;
         }
 
+    
+        private void CalcularExistencia(Factura factura)
+        {
+            foreach (var detalle in factura.FacturaDetalle)
+            {
+                var producto = _contexto.Productos.Find(detalle.ProductoId);
+                if (producto != null)
+                {
+                    if (factura.Activo == true)
+                    {
+                        producto.Cantidad = producto.Cantidad - detalle.Cantidad;
+
+                    }
+                    else
+                    {
+                        producto.Cantidad = producto.Cantidad + detalle.Cantidad;
+                    }
+                    
+                }
+
+            }
+        }
+
+      
         public void CalcularFactura(Factura factura)
         {
             if (factura !=null)
@@ -106,30 +130,13 @@ namespace BL.Restaurant
                     factura.Activo = false;
                     CalcularExistencia(factura);
                     _contexto.SaveChanges();
+
                         return true;
                 }
             }
             return false;
         }
 
-        private void CalcularExistencia(Factura factura)
-        {
-            foreach (var detalle in factura.FacturaDetalle)
-            {
-                var producto = _contexto.Productos.Find(detalle.ProductoId);
-                if (producto != null)
-                {
-                    if (factura.Activo == true)
-                    {
-                        producto.Existencia = producto.Existencia - detalle.Cantidad;
-                    }
-                    else
-                    {
-                        producto.Existencia = producto.Existencia + detalle.Cantidad;
-                    }
-                }
-            }
-        }
 
         private Resultado Validar(Factura factura)
         {
