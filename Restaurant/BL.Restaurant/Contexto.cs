@@ -29,6 +29,8 @@ namespace BL.Restaurant
         public DbSet <Categoria> Categorias { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet <Factura> Facturas { get; set; }
+        public DbSet <Usuario> Usuarios  { get; set;}
+
     }
 
 }

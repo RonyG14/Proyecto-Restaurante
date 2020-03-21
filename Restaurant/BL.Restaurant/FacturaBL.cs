@@ -66,39 +66,24 @@ namespace BL.Restaurant
             {
                 return resultado;
             }
-
-            CalcularExistencia(factura);
-
-
-            _contexto.SaveChanges();
-            resultado.Exitoso = true;
-            return resultado;
-        }
-
-    
-        private void CalcularExistencia(Factura factura)
-        {
             foreach (var detalle in factura.FacturaDetalle)
             {
                 var producto = _contexto.Productos.Find(detalle.ProductoId);
                 if (producto != null)
                 {
-                    if (factura.Activo == true)
-                    {
-                        producto.Cantidad = producto.Cantidad - detalle.Cantidad;
+                    producto.Cantidad  = producto.Cantidad - detalle.Cantidad;
 
-                    }
-                    else
-                    {
-                        producto.Cantidad = producto.Cantidad + detalle.Cantidad;
-                    }
-                    
                 }
-
             }
+
+
+            CalcularExistencia(factura);
+
+            _contexto.SaveChanges();   
+            resultado.Exitoso = true;
+            return resultado;
         }
 
-      
         public void CalcularFactura(Factura factura)
         {
             if (factura !=null)
@@ -130,13 +115,30 @@ namespace BL.Restaurant
                     factura.Activo = false;
                     CalcularExistencia(factura);
                     _contexto.SaveChanges();
-
                         return true;
                 }
             }
             return false;
         }
 
+        private void CalcularExistencia(Factura factura)
+        {
+            foreach (var detalle in factura.FacturaDetalle)
+            {
+                var producto = _contexto.Productos.Find(detalle.ProductoId);
+                if (producto != null)
+                {
+                    if (factura.Activo == true)
+                    {
+                        producto.Cantidad = producto.Cantidad  - detalle.Cantidad;
+                    }
+                    else
+                    {
+                        producto.Cantidad = producto.Cantidad + detalle.Cantidad;
+                    }
+                }
+            }
+        }
 
         private Resultado Validar(Factura factura)
         {
@@ -150,6 +152,12 @@ namespace BL.Restaurant
 
                 return resultado;
             }
+            if (factura.Id !=0 && factura.Activo == true )
+            {
+                resultado.Mensaje = "La factura ya fue guardada y no se pueden realizar cambios, Ingrese otra porfavor";
+                resultado.Exitoso = false;
+            }
+
 
             if (factura.Activo == false)
             {

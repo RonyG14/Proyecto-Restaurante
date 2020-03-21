@@ -44,6 +44,9 @@ namespace Restaurant
             Usuario = textBox1.Text;
             Contrasena = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
 
             var resultado = _seguridad.Autorizar (Usuario, Contrasena);
 
@@ -55,6 +58,8 @@ namespace Restaurant
             {
                 MessageBox.Show("Usuario o Contrasena Incorrecta");
             }
+            button1.Enabled = true;
+            button1.Text = "Aceptar";
         }
 
         private void FormLogin_Load(object sender, EventArgs e)

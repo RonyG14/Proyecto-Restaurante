@@ -47,7 +47,6 @@
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,8 +103,7 @@
             this.cambiarToolStripMenuItem,
             this.agregarToolStripMenuItem,
             this.eliminarUsuarioToolStripMenuItem,
-            this.productoToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.productoToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -122,14 +120,14 @@
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // contrasenaToolStripMenuItem
             // 
             this.contrasenaToolStripMenuItem.Name = "contrasenaToolStripMenuItem";
-            this.contrasenaToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.contrasenaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.contrasenaToolStripMenuItem.Text = "Contrasena";
             this.contrasenaToolStripMenuItem.Click += new System.EventHandler(this.contrasenaToolStripMenuItem_Click);
             // 
@@ -159,13 +157,13 @@
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facturaToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.menuToolStripMenuItem.Text = "Facturacion";
             // 
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.facturaToolStripMenuItem.Text = "Factura";
             this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
@@ -203,12 +201,6 @@
             this.button2.Text = "MENU";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
-            this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // FormMenu
             // 
@@ -251,6 +243,5 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }
 }

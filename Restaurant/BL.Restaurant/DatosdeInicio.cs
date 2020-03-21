@@ -14,7 +14,35 @@ namespace BL.Restaurant
         protected override void Seed(Contexto contexto)
         {
 
-             var tiempo1 = new Tiempo();
+           var usuarioAdmin = new Usuario(); 
+            usuarioAdmin.Nombre = "Admin";
+            usuarioAdmin.Contrasena = "123";
+            contexto.Usuarios.Add(usuarioAdmin);
+
+            var usuarioAdmin2 = new Usuario();
+            usuarioAdmin2.Nombre = "Admin2";
+            usuarioAdmin2.Contrasena = "1234";
+            contexto.Usuarios.Add(usuarioAdmin2);
+
+            var usuarioAdmin3 = new Usuario();
+            usuarioAdmin3.Nombre = "Admin3";
+            usuarioAdmin3.Contrasena = "12345";
+            contexto.Usuarios.Add(usuarioAdmin3);
+
+            var usuarioAdmin4 = new Usuario();
+            usuarioAdmin4.Nombre = "Admin4";
+            usuarioAdmin4.Contrasena = "123456";
+            contexto.Usuarios.Add(usuarioAdmin4);
+
+            var usuarioAdmin5 = new Usuario();
+            usuarioAdmin5.Nombre = "RicardoAnduray";
+            usuarioAdmin5.Contrasena = "Ricardo";
+            contexto.Usuarios.Add(usuarioAdmin5);
+
+
+
+
+            var tiempo1 = new Tiempo();
              tiempo1.Descripcion = "Mañana";
             contexto.Tiempos.Add(tiempo1);
 

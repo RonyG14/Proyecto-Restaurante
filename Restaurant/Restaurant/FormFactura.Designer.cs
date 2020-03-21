@@ -35,6 +35,7 @@
             System.Windows.Forms.Label impuestoLabel;
             System.Windows.Forms.Label subtotalLabel;
             System.Windows.Forms.Label clienteIdLabel;
+            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFactura));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -78,6 +79,7 @@
             impuestoLabel = new System.Windows.Forms.Label();
             subtotalLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingNavigator)).BeginInit();
             this.listaFacturasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingSource)).BeginInit();
@@ -91,7 +93,7 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(27, 169);
+            activoLabel.Location = new System.Drawing.Point(53, 203);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(50, 17);
             activoLabel.TabIndex = 3;
@@ -100,7 +102,7 @@
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(27, 126);
+            fechaLabel.Location = new System.Drawing.Point(53, 160);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(51, 17);
             fechaLabel.TabIndex = 7;
@@ -109,7 +111,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(27, 77);
+            idLabel.Location = new System.Drawing.Point(53, 111);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(23, 17);
             idLabel.TabIndex = 9;
@@ -118,7 +120,7 @@
             // impuestoLabel
             // 
             impuestoLabel.AutoSize = true;
-            impuestoLabel.Location = new System.Drawing.Point(327, 113);
+            impuestoLabel.Location = new System.Drawing.Point(364, 133);
             impuestoLabel.Name = "impuestoLabel";
             impuestoLabel.Size = new System.Drawing.Size(69, 17);
             impuestoLabel.TabIndex = 11;
@@ -127,7 +129,7 @@
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
-            subtotalLabel.Location = new System.Drawing.Point(327, 160);
+            subtotalLabel.Location = new System.Drawing.Point(364, 180);
             subtotalLabel.Name = "subtotalLabel";
             subtotalLabel.Size = new System.Drawing.Size(64, 17);
             subtotalLabel.TabIndex = 13;
@@ -136,15 +138,24 @@
             // clienteIdLabel
             // 
             clienteIdLabel.AutoSize = true;
-            clienteIdLabel.Location = new System.Drawing.Point(327, 70);
+            clienteIdLabel.Location = new System.Drawing.Point(364, 93);
             clienteIdLabel.Name = "clienteIdLabel";
             clienteIdLabel.Size = new System.Drawing.Size(59, 17);
             clienteIdLabel.TabIndex = 17;
             clienteIdLabel.Text = "Cliente :";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(364, 229);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(40, 17);
+            label2.TabIndex = 22;
+            label2.Text = "Total";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(163, 537);
+            this.button1.Location = new System.Drawing.Point(176, 569);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 33);
             this.button1.TabIndex = 0;
@@ -154,7 +165,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(427, 537);
+            this.button2.Location = new System.Drawing.Point(440, 569);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 33);
             this.button2.TabIndex = 1;
@@ -189,7 +200,7 @@
             this.listaFacturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaFacturasBindingNavigator.Name = "listaFacturasBindingNavigator";
             this.listaFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(704, 27);
+            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(722, 27);
             this.listaFacturasBindingNavigator.TabIndex = 2;
             this.listaFacturasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -309,7 +320,7 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
-            this.activoCheckBox.Location = new System.Drawing.Point(103, 164);
+            this.activoCheckBox.Location = new System.Drawing.Point(129, 198);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(200, 24);
             this.activoCheckBox.TabIndex = 4;
@@ -318,7 +329,7 @@
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(103, 122);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(129, 156);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.fechaDateTimePicker.TabIndex = 8;
@@ -326,7 +337,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
-            this.idTextBox.Location = new System.Drawing.Point(103, 72);
+            this.idTextBox.Location = new System.Drawing.Point(129, 106);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(85, 22);
@@ -335,7 +346,7 @@
             // impuestoTextBox
             // 
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.impuestoTextBox.Location = new System.Drawing.Point(403, 110);
+            this.impuestoTextBox.Location = new System.Drawing.Point(440, 130);
             this.impuestoTextBox.Name = "impuestoTextBox";
             this.impuestoTextBox.ReadOnly = true;
             this.impuestoTextBox.Size = new System.Drawing.Size(200, 22);
@@ -345,7 +356,7 @@
             // subtotalTextBox
             // 
             this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.subtotalTextBox.Location = new System.Drawing.Point(403, 157);
+            this.subtotalTextBox.Location = new System.Drawing.Point(440, 177);
             this.subtotalTextBox.Name = "subtotalTextBox";
             this.subtotalTextBox.ReadOnly = true;
             this.subtotalTextBox.Size = new System.Drawing.Size(200, 22);
@@ -355,7 +366,7 @@
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.totalTextBox.Location = new System.Drawing.Point(403, 204);
+            this.totalTextBox.Location = new System.Drawing.Point(440, 224);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(200, 22);
@@ -391,7 +402,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(30, 299);
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(43, 331);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.RowTemplate.Height = 24;
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(643, 220);
@@ -432,7 +443,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(35, 241);
+            this.button3.Location = new System.Drawing.Point(48, 273);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 52);
             this.button3.TabIndex = 19;
@@ -443,7 +454,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(587, 241);
+            this.button4.Location = new System.Drawing.Point(600, 273);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 52);
             this.button4.TabIndex = 20;
@@ -458,7 +469,7 @@
             this.clienteIdComboBox.DisplayMember = "Nombre";
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(403, 70);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(440, 90);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
             this.clienteIdComboBox.Size = new System.Drawing.Size(200, 24);
             this.clienteIdComboBox.TabIndex = 18;
@@ -466,12 +477,17 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(526, 27);
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Montserrat Subrayada", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(137, 48);
+            this.label1.MaximumSize = new System.Drawing.Size(200, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 32);
+            this.label1.Size = new System.Drawing.Size(174, 37);
             this.label1.TabIndex = 21;
             this.label1.Text = "ANULADO";
             this.label1.Visible = false;
@@ -481,7 +497,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(704, 610);
+            this.ClientSize = new System.Drawing.Size(722, 700);
+            this.Controls.Add(label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

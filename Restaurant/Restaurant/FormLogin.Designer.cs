@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 238);
+            this.label1.Location = new System.Drawing.Point(157, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(284, 233);
+            this.textBox1.Location = new System.Drawing.Point(282, 206);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 1;
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(159, 315);
+            this.label2.Location = new System.Drawing.Point(157, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(284, 315);
+            this.textBox2.Location = new System.Drawing.Point(282, 288);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(100, 22);
@@ -79,9 +79,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 379);
+            this.button1.Location = new System.Drawing.Point(77, 378);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 41);
+            this.button1.Size = new System.Drawing.Size(159, 40);
             this.button1.TabIndex = 4;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(264, 379);
+            this.button2.Location = new System.Drawing.Point(282, 378);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 41);
+            this.button2.Size = new System.Drawing.Size(156, 40);
             this.button2.TabIndex = 5;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(201, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(199, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(103, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(51, 298);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 271);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(51, 204);
+            this.pictureBox3.Location = new System.Drawing.Point(49, 177);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(94, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(487, 500);
+            this.ClientSize = new System.Drawing.Size(487, 476);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
