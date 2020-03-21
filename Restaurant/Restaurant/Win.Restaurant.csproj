@@ -64,6 +64,12 @@
     <Compile Include="FormAgregar.Designer.cs">
       <DependentUpon>FormAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormComidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="FormAgregar.resx">
       <DependentUpon>FormAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormComidas.resx">
       <DependentUpon>FormComidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,11 +188,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Restaurant.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Restaurant.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\BL.Restaurant.FacturaBL.datasource" />
     <None Include="Properties\DataSources\BL.Restaurant.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Restaurant.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BL.Restaurant.RestaurantSeguridadBL.datasource" />
-    <None Include="Properties\DataSources\BL.Restaurant.Tipo.datasource" />
-    <None Include="Properties\DataSources\BL.Restaurant.TipoBL.datasource" />
+    <None Include="Properties\DataSources\BL.Restaurant.TiemposBL.datasource" />
     <None Include="Properties\DataSources\System.Data.Entity.SqlServer.SqlAzureExecutionStrategy1.datasource" />
     <None Include="Properties\DataSources\System.Data.Entity.SqlServer.SqlFunctions1.datasource" />
     <None Include="Properties\DataSources\System.Data.Entity.SqlServer.SqlHierarchyIdFunctions1.datasource" />

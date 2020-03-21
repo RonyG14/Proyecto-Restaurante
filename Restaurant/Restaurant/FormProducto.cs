@@ -15,23 +15,24 @@ namespace Restaurant
     public partial class FormProducto : Form
     {
         ProductosBL _productos; // Creacion de Variable
-        TipoBL _tipos;
-
+        TiemposBL _tiemposBL;
+        CategoriasBL _categoriasBL;
 
 
         public object ListaProductosBindingSource { get; private set; }
-        
 
         public FormProducto() // Constructor
         {
             InitializeComponent();
 
             _productos = new ProductosBL(); // Inicializamos Variable
-            listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+            productoBindingSource.DataSource = _productos.ObtenerProductos();
 
-            _tipos = new TipoBL(); // Inicializamos Variable
-            listadeTiposBindingSource.DataSource = _tipos.ObtenerTipos();
+            _tiemposBL = new TiemposBL(); // Inicializamos Variable
+            tiemposBLBindingSource.DataSource = _tiemposBL.ObtenerTiempo();
 
+            _categoriasBL = new CategoriasBL();
+            categoriasBLBindingSource.DataSource = _categoriasBL.ObtenerCategorias();
 
         }
 
@@ -84,16 +85,18 @@ namespace Restaurant
 
         private void productoBindingNavigatorSaveItem_Click(object sender, EventArgs e)  //
         {
-            productoBindingSource.EndEdit();
+            productoBindingSource.EndEdit(); 
+
             var producto = (Producto)productoBindingSource.Current;
 
-            if (fotoPictureBox.Image != null)
+            if (fotoPictureBox .Image != null)
             {
                 producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+
             }
             else
             {
-                producto.Foto = null;
+                producto.Foto = null; 
             }
 
             var resultado = _productos.GuardarProducto(producto);
@@ -135,8 +138,9 @@ namespace Restaurant
 
         private void toolStripButtomCancelar_Click(object sender, EventArgs e)
         {
+            _productos.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+           
         }
 
         private void tipoTextBox_TextChanged(object sender, EventArgs e)
@@ -146,26 +150,27 @@ namespace Restaurant
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             var producto = (Producto)productoBindingSource.Current;
-
-            if (producto != null)
+            if (producto!= null)
             {
-                openFileDialog1.ShowDialog();
-                var Archivo = openFileDialog1.FileName;
-                if (Archivo != "")
-                {
-                    var fileInfo = new FileInfo(Archivo);
-                    var fileStream = fileInfo.OpenRead();
 
-                    fotoPictureBox.Image = Image.FromStream(fileStream);
-                }
+            openFileDialog1.ShowDialog();
+            var archivo = openFileDialog1.FileName; 
+
+            if (archivo != "")
+            {
+                var fileInfo = new FileInfo(archivo);
+                var fileStream = fileInfo.OpenRead();
+
+                fotoPictureBox.Image = Image.FromStream(fileStream);
 
             }
+        }
             else
             {
-                MessageBox.Show("Cree un producto antes de asignarle una imagen");
+                MessageBox.Show("Agregue un Menu Antes de Asignarle una Foto ");
             }
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -173,12 +178,7 @@ namespace Restaurant
             fotoPictureBox.Image = null;
         }
 
-        private void fotoPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tipoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
